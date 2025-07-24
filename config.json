@@ -1,0 +1,57 @@
+{
+  "analysis": {
+    "includePrivate": false,
+    "includeTests": true,
+    "includeNodeModules": false,
+    "maxDepth": 10,
+    "maxFileSize": 1048576,
+    "excludePatterns": [
+      "*.min.js",
+      "*.bundle.js",
+      "node_modules/**",
+      ".git/**",
+      "dist/**",
+      "build/**",
+      "coverage/**",
+      "*.log"
+    ],
+    "supportedLanguages": [
+      "javascript",
+      "typescript",
+      "python",
+      "java",
+      "csharp",
+      "go",
+      "rust"
+    ]
+  },
+  "output": {
+    "includeSourceCode": true,
+    "includeDiagrams": true,
+    "includeMetrics": true,
+    "groupByModule": true,
+    "generateIndex": true,
+    "maxCodeSnippetLines": 50
+  },
+  "templates": {
+    "default": "standard",
+    "customPath": "./templates",
+    "variables": {
+      "projectName": "Documentation Maker",
+      "author": "Documentation Maker",
+      "version": "1.0.0"
+    }
+  },
+  "formatting": {
+    "codeHighlighting": true,
+    "includeLineNumbers": true,
+    "wrapLongLines": true,
+    "indentSize": 2
+  },
+  "generation": {
+    "parallel": true,
+    "maxConcurrency": 4,
+    "timeout": 30000,
+    "retryAttempts": 3
+  }
+}

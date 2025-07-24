@@ -1,0 +1,14 @@
+{
+  "format": "markdown",
+  "templateName": "detailed",
+  "generatedAt": "2025-07-24T04:40:55.334Z",
+  "analysisResult": {
+    "totalFiles": 35,
+    "totalClasses": 65,
+    "totalFunctions": 1166,
+    "languages": [
+      "csharp",
+      "javascript"
+    ]
+  }
+}

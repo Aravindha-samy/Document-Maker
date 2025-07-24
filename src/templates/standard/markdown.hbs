@@ -1,0 +1,178 @@
+# {{projectName}} Documentation
+
+*Generated on {{formatDate generatedAt}} by Documentation Maker*
+
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Project Statistics](#project-statistics)
+- [Language Distribution](#language-distribution)
+- [Project Structure](#project-structure)
+- [Classes](#classes)
+- [Functions](#functions)
+- [Interfaces](#interfaces)
+- [Dependencies](#dependencies)
+- [Metrics](#metrics)
+
+## 🔍 Overview
+
+This documentation was automatically generated from the codebase analysis of **{{projectName}}**.
+
+### Project Statistics
+
+| Metric | Count |
+|--------|-------|
+| **Total Files** | {{metrics.totalFiles}} |
+| **Total Classes** | {{metrics.totalClasses}} |
+| **Total Functions** | {{metrics.totalFunctions}} |
+| **Total Interfaces** | {{metrics.totalInterfaces}} |
+| **Total Dependencies** | {{dependencies.length}} |
+
+### Language Distribution
+
+{{#each metrics.languageDistribution}}
+- **{{capitalize @key}}**: {{this}} files
+{{/each}}
+
+## 📁 Project Structure
+
+{{#each structure.modules}}
+### 📂 `{{path}}`
+
+{{#if files.length}}
+#### Files
+{{#each files}}
+- 📄 `{{relativePath}}` *({{language}})*
+{{/each}}
+{{/if}}
+
+{{#if classes.length}}
+#### Classes
+{{#each classes}}
+- 🏛️ **{{name}}** *(Lines {{startLine}}-{{endLine}})*
+{{/each}}
+{{/if}}
+
+{{#if functions.length}}
+#### Functions
+{{#each functions}}
+- ⚙️ **{{name}}** *(Lines {{startLine}}-{{endLine}})*
+{{/each}}
+{{/if}}
+
+---
+
+{{/each}}
+
+## 🏛️ Classes
+
+{{#each classes}}
+### `{{name}}`
+
+**📄 File**: `{{file}}`  
+**🔤 Language**: {{capitalize language}}  
+**📍 Lines**: {{startLine}}-{{endLine}}
+
+{{#if methods.length}}
+#### Methods
+{{#each methods}}
+- `{{name}}`
+{{/each}}
+{{/if}}
+
+{{#if properties.length}}
+#### Properties
+{{#each properties}}
+- `{{name}}`
+{{/each}}
+{{/if}}
+
+---
+
+{{/each}}
+
+## ⚙️ Functions
+
+{{#each functions}}
+### `{{name}}`
+
+**📄 File**: `{{file}}`  
+**🔤 Language**: {{capitalize language}}  
+**📍 Lines**: {{startLine}}-{{endLine}}
+
+{{#if parameters.length}}
+#### Parameters
+{{#each parameters}}
+- **{{name}}**: `{{type}}`
+{{/each}}
+{{/if}}
+
+{{#if returnType}}
+#### Returns
+`{{returnType}}`
+{{/if}}
+
+---
+
+{{/each}}
+
+## 🔗 Interfaces
+
+{{#each interfaces}}
+### `{{name}}`
+
+**📄 File**: `{{file}}`  
+**🔤 Language**: {{capitalize language}}  
+**📍 Lines**: {{startLine}}-{{endLine}}
+
+{{#if methods.length}}
+#### Methods
+{{#each methods}}
+- `{{name}}`
+{{/each}}
+{{/if}}
+
+{{#if properties.length}}
+#### Properties
+{{#each properties}}
+- `{{name}}`
+{{/each}}
+{{/if}}
+
+---
+
+{{/each}}
+
+## 🔗 Dependencies
+
+{{#if dependencies.length}}
+{{#each dependencies}}
+- `{{from}}` → `{{to}}`
+{{/each}}
+{{else}}
+*No dependencies found.*
+{{/if}}
+
+## 📊 Metrics
+
+### Complexity Metrics
+- **Average Functions per File**: {{#if metrics.complexityMetrics.averageFunctionsPerFile}}{{metrics.complexityMetrics.averageFunctionsPerFile}}{{else}}0{{/if}}
+- **Average Classes per File**: {{#if metrics.complexityMetrics.averageClassesPerFile}}{{metrics.complexityMetrics.averageClassesPerFile}}{{else}}0{{/if}}
+- **Total Dependencies**: {{#if metrics.complexityMetrics.totalDependencies}}{{metrics.complexityMetrics.totalDependencies}}{{else}}0{{/if}}
+
+### File Size Distribution
+{{#each metrics.languageDistribution}}
+- **{{capitalize @key}}**: {{this}} files
+{{/each}}
+
+---
+
+## 🛠️ Generated with Documentation Maker
+
+This documentation was automatically generated using [Documentation Maker](https://github.com/yourusername/documentation-maker).
+
+**Generation Details:**
+- **Version**: {{version}}
+- **Author**: {{author}}
+- **Generated**: {{formatDate generatedAt}}
+- **Template**: Standard Markdown Template
